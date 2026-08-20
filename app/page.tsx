@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { generateIdentity, Identity, CountryCode } from './lib/generate';
 import { Navbar } from './components/Navbar';
 import { IdentityCard } from './components/IdentityCard';
 import { CountryPicker } from './components/CountryPicker';
 import { SignInModal } from './components/SignInModal';
 import { IDCardModal } from './components/IDCardModal';
+
 
 const STORAGE_USER   = 'altame_user';
 const STORAGE_SAVED  = 'altame_saved';
@@ -110,6 +112,15 @@ export default function Home() {
             />
           </div>
           <div className="flex items-center gap-2.5">
+            {savedIdentities.length > 0 && (
+              <Link
+                href="/saved"
+                className="text-xs uppercase font-bold tracking-wider text-[#111110] bg-[#faf9f6] border-2 border-[#111110] hover:bg-[#111110] hover:text-white px-3.5 py-2 transition-colors cursor-pointer shadow-[2px_2px_0px_#d63a1a]"
+              >
+                Saved Vault ({savedIdentities.length})
+              </Link>
+            )}
+
             {user ? (
               <button
                 id="save-btn"
@@ -137,6 +148,7 @@ export default function Home() {
               {isGenerating ? 'Generating...' : 'Generate New'}
             </button>
           </div>
+
         </div>
 
         {/* Identity Card */}
@@ -158,8 +170,11 @@ export default function Home() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#111110]">
                 Saved Identities ({savedIdentities.length})
               </span>
-              <span className="font-mono text-xs text-[#b8b6b0]">Permanent Storage</span>
+              <Link href="/saved" className="text-xs font-bold uppercase tracking-wider text-[#d63a1a] hover:underline">
+                Open Dashboard Vault →
+              </Link>
             </div>
+
             <div className="divide-y divide-[#e0ddd8] border border-[#e0ddd8]">
               {savedIdentities.map(saved => (
                 <div
