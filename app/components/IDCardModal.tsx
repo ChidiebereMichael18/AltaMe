@@ -308,7 +308,12 @@ export function IDCardModal({ identity, onClose }: IDCardModalProps) {
             {savedStatus ? 'Saved to Device!' : 'Save Card Document'}
           </button>
         </div>
+
+        <p className="text-[10px] text-[#b8b6b0] text-center mt-3 uppercase tracking-wider font-semibold">
+          For Development & Testing Simulation Only · Not an Official Document
+        </p>
       </div>
     </div>
+
   );
 }

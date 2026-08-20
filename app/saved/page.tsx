@@ -203,7 +203,16 @@ export default function SavedVaultPage() {
             ))}
           </div>
         )}
+
+        {/* Footer Disclaimer */}
+        <footer className="mt-16 pt-8 border-t border-[#e0ddd8]">
+          <div className="bg-[#faf9f6] border border-[#e0ddd8] p-4 text-[11px] text-[#7a7870] leading-relaxed">
+            <span className="font-bold uppercase tracking-wider text-[#111110]">Disclaimer: </span>
+            Altame generates artificial data strictly for software development, QA testing, design prototyping, and educational demonstration purposes. All names, numbers, addresses, and physical ID previews are randomly synthesized. Altame does not issue official government documents and must not be used for fraudulent or unlawful activity.
+          </div>
+        </footer>
       </main>
+
 
       {activeIDModalIdentity && (
         <IDCardModal
