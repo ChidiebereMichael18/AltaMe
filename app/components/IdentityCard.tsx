@@ -121,7 +121,7 @@ export function IdentityCard({
                 onClick={handleGenerateIDCardClick}
                 className="inline-flex items-center gap-1.5 bg-[#d63a1a] hover:bg-[#b82e12] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 transition-colors cursor-pointer shadow-[2px_2px_0px_#111110]"
               >
-                {user ? '📄 View Physical ID Card' : '🔒 Sign in to Generate Physical ID Card'}
+                {user ? 'View Physical ID Card' : ' Sign in to Generate Physical ID Card'}
               </button>
             </div>
           </div>

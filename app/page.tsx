@@ -212,7 +212,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="font-bold text-[#111110] hover:text-[#d63a1a] transition-colors underline decoration-[#d63a1a] underline-offset-4"
             >
-              Chidiebere Michael
+              Michael
             </a>
           </div>
 
