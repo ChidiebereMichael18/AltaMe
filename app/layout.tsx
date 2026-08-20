@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Altame - Generate a New Identity",
   description:
-    "Generate a complete, realistic fake identity — name, age, SSN, address, and more. Free, instant, no account required.",
+    "Generate a complete, realistic fake identity - name, age, SSN, address, and more. Free, instant, no account required.",
   keywords: ["fake identity", "identity generator", "test data", "fake name", "SSN generator", "developer tools"],
   openGraph: {
     title: "Altame - Generate a New Identity",
