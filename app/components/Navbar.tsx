@@ -1,5 +1,7 @@
 'use client';
 
+import { Logo } from './Logo';
+
 interface NavbarProps {
   user: { name: string; email: string } | null;
   onSignIn: () => void;
@@ -9,9 +11,7 @@ interface NavbarProps {
 export function Navbar({ user, onSignIn, onSignOut }: NavbarProps) {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-10 h-14 bg-[#16140f] border-b-4 border-[#d63a1a]">
-      <div className="font-serif text-2xl font-bold tracking-tight text-white select-none">
-        altame<span className="text-[#d63a1a]">.</span>
-      </div>
+      <Logo />
 
       <div className="flex items-center gap-3">
         {user ? (
