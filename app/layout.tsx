@@ -29,13 +29,22 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
   openGraph: {
     title: "Altame - Generate a New Identity",
-    description: "A complete fake persona, generated instantly. For testing, privacy, and development.",
+    description: "Generate realistic test data, personas & physical ID cards across 8 countries.",
     type: "website",
+    url: "https://altame.vercel.app",
+    siteName: "Altame",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Altame - Generate a New Identity",
+    description: "Generate realistic test data, personas & physical ID cards across 8 countries.",
   },
 };
+
 
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
