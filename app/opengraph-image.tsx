@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'nodejs';
 
-export const alt = 'Altame - Instant Identity Generator';
+export const alt = 'Altame Logo';
 export const size = {
   width: 1200,
   height: 630,
@@ -21,15 +21,25 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          borderBottom: '12px solid #D63A1A',
-          padding: '60px',
-          fontFamily: 'sans-serif',
+          position: 'relative',
         }}
       >
-        {/* Mask Icon */}
+        {/* Red Accent Bar at top */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '12px',
+            background: '#D63A1A',
+          }}
+        />
+
+        {/* Clean Large Brand Mask Emblem */}
         <svg
-          width="120"
-          height="92"
+          width="240"
+          height="184"
           viewBox="0 0 34 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,32 +60,20 @@ export default async function Image() {
           <polygon points="20,9 26,11 22,13" fill="#FFFFFF" />
         </svg>
 
-        {/* Title */}
+        {/* Clean Brand Title */}
         <h1
           style={{
-            fontSize: '72px',
+            fontSize: '84px',
             fontWeight: '900',
             color: '#FFFFFF',
-            marginTop: '24px',
-            marginBottom: '12px',
+            marginTop: '28px',
+            marginBottom: '0px',
             letterSpacing: '-0.03em',
+            fontFamily: 'serif',
           }}
         >
           altame<span style={{ color: '#D63A1A' }}>.</span>
         </h1>
-
-        {/* Tagline */}
-        <p
-          style={{
-            fontSize: '28px',
-            color: '#A0A098',
-            maxWidth: '800px',
-            textAlign: 'center',
-            lineHeight: '1.4',
-          }}
-        >
-          Instant Identity Generator · 8 Countries · Physical ID Preview
-        </p>
       </div>
     ),
     {
