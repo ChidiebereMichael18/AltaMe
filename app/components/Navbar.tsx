@@ -30,13 +30,14 @@ export function Navbar({ user, onSignIn, onSignOut }: NavbarProps) {
         {/* Prominent High-Visibility Vault Link */}
         <Link
           href="/saved"
-          className="text-xs uppercase font-extrabold tracking-wider text-white bg-[#d63a1a] hover:bg-[#b82e12] px-3.5 py-1.5 transition-colors flex items-center gap-2 shadow-[2px_2px_0px_#ffffff]"
+          className="text-[10px] sm:text-xs uppercase font-extrabold tracking-wider text-white bg-[#d63a1a] hover:bg-[#b82e12] px-2 py-1 sm:px-3 sm:py-1.5 transition-colors flex items-center gap-1.5 shadow-[1.5px_1.5px_0px_#ffffff]"
         >
-          <span>Saved Vault</span>
-          <span className="bg-white text-[#111110] text-[11px] font-extrabold px-1.5 py-0.2 rounded-xs font-mono">
+          <span>Vault</span>
+          <span className="bg-white text-[#111110] text-[9px] sm:text-[11px] font-extrabold px-1 sm:px-1.5 py-0.2 rounded-xs font-mono">
             {savedCount}
           </span>
         </Link>
+
 
         {user ? (
           <>

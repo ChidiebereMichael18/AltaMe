@@ -115,10 +115,11 @@ export default function Home() {
             {savedIdentities.length > 0 && (
               <Link
                 href="/saved"
-                className="text-xs uppercase font-bold tracking-wider text-[#111110] bg-[#faf9f6] border-2 border-[#111110] hover:bg-[#111110] hover:text-white px-3.5 py-2 transition-colors cursor-pointer shadow-[2px_2px_0px_#d63a1a]"
+                className="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-[#111110] bg-[#faf9f6] border-2 border-[#111110] hover:bg-[#111110] hover:text-white px-2 py-1.5 sm:px-3.5 sm:py-2 transition-colors cursor-pointer shadow-[2px_2px_0px_#d63a1a]"
               >
-                Saved Vault ({savedIdentities.length})
+                Vault ({savedIdentities.length})
               </Link>
+
             )}
 
             {user ? (
