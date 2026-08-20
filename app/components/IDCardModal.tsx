@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Identity, CountryCode } from '../lib/generate';
+import { PassportPhoto } from './PassportPhoto';
+
 
 interface IDCardModalProps {
   identity: Identity;
@@ -172,15 +174,10 @@ export function IDCardModal({ identity, onClose }: IDCardModalProps) {
             {/* Left Side: Photo, EMV Chip, Signature */}
             <div className="w-[76px] shrink-0 flex flex-col items-center gap-1.5 z-10">
               {/* Photo Frame */}
-              <div className="w-[72px] h-[90px] border-1.5 border-[#111110] bg-white overflow-hidden shadow-xs">
-                <svg width="72" height="90" viewBox="0 0 90 115" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <rect width="90" height="115" fill="#E8E6E1" />
-                  <path d="M0 23H90M0 46H90M0 69H90M0 92H90M22.5 0V115M45 0V115M67.5 0V115" stroke="#D8D5CC" strokeWidth="0.5" strokeDasharray="2 2" />
-                  <circle cx="45" cy="40" r="17" fill="#4B4942" />
-                  <path d="M15 98C15 78 27 70 45 70C63 70 75 78 75 98V115H15V98Z" fill="#4B4942" />
-                  <circle cx="45" cy="40" r="23" stroke={theme.accentColor} strokeWidth="0.75" strokeDasharray="3 3" opacity="0.6" />
-                </svg>
-              </div>
+              <PassportPhoto gender={identity.gender} className="w-[72px] h-[90px]" />
+
+
+
 
               {/* EMV Chip */}
               <div className="w-[30px] h-[22px] bg-gradient-to-br from-[#e6c875] via-[#d4af37] to-[#997819] border border-[#775c0c] rounded-xs relative overflow-hidden">

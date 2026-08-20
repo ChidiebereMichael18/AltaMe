@@ -5,7 +5,9 @@ import Link from 'next/link';
 import { Identity } from '../lib/generate';
 import { Navbar } from '../components/Navbar';
 import { IDCardModal } from '../components/IDCardModal';
+import { PassportPhoto } from '../components/PassportPhoto';
 import { copyToClipboard, formatIdentityAsText } from '../lib/copy';
+
 
 const STORAGE_USER = 'altame_user';
 const STORAGE_SAVED = 'altame_saved';
@@ -136,13 +138,9 @@ export default function SavedVaultPage() {
                   </div>
 
                   <div className="p-4 border-b border-[#e0ddd8] flex items-center gap-4 bg-[#faf9f6]">
-                    <div className="w-[50px] h-[64px] border border-[#111110] bg-[#eceae4] shrink-0 overflow-hidden">
-                      <svg width="50" height="64" viewBox="0 0 90 115" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                        <rect width="90" height="115" fill="#ECEAE4" />
-                        <circle cx="45" cy="40" r="17" fill="#6B6960" />
-                        <path d="M15 98C15 78 27 70 45 70C63 70 75 78 75 98V115H15V98Z" fill="#6B6960" />
-                      </svg>
-                    </div>
+                    <PassportPhoto gender={item.gender} className="w-[50px] h-[64px] shrink-0" />
+
+
                     <div className="min-w-0">
                       <h3 className="font-serif text-xl font-bold text-[#111110] truncate">
                         {item.fullName}

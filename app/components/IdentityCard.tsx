@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import { Identity } from '../lib/generate';
 import { FieldRow } from './FieldRow';
+import { PassportPhoto } from './PassportPhoto';
 import { copyToClipboard, formatIdentityAsText } from '../lib/copy';
+
 
 interface IdentityCardProps {
   identity: Identity;
@@ -80,23 +82,13 @@ export function IdentityCard({
         <div className="p-6 bg-[#faf9f6] border-b border-[#e0ddd8] flex items-center gap-6">
           {/* Photo Placeholder */}
           <div className="shrink-0 flex flex-col items-center gap-1.5">
-            <div className={`w-[76px] h-[96px] border-2 border-[#111110] bg-[#eceae4] overflow-hidden relative shadow-[2px_2px_0px_#111110] transition-opacity duration-200 ${isGenerating ? 'opacity-20' : 'opacity-100'}`}>
-              <svg width="76" height="96" viewBox="0 0 90 115" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                <rect width="90" height="115" fill="#ECEAE4" />
-                <path d="M0 23H90M0 46H90M0 69H90M0 92H90M22.5 0V115M45 0V115M67.5 0V115" stroke="#D8D5CC" strokeWidth="0.5" strokeDasharray="2 2" />
-                <circle cx="45" cy="40" r="17" fill="#6B6960" />
-                <path d="M15 98C15 78 27 70 45 70C63 70 75 78 75 98V115H15V98Z" fill="#6B6960" />
-                <circle cx="45" cy="40" r="23" stroke="#D63A1A" strokeWidth="0.75" strokeDasharray="3 3" opacity="0.45" />
-                <path d="M45 13V17M45 63V67M18 40H22M68 40H72" stroke="#D63A1A" strokeWidth="0.75" opacity="0.45" />
-              </svg>
-              <div className="absolute bottom-1 right-1 font-mono text-[8px] font-bold tracking-widest text-white/90 bg-[#111110]/70 px-1 py-0.5 rounded-sm">
-                PASSPORT
-              </div>
-            </div>
+            <PassportPhoto gender={identity.gender} className={`w-[76px] h-[96px] transition-opacity duration-200 ${isGenerating ? 'opacity-20' : 'opacity-100'}`} />
+
             <span className="text-[9px] font-extrabold tracking-widest text-[#7a7870] uppercase">
-              PHOTO PLACEHOLDER
+              BIOMETRIC PHOTO
             </span>
           </div>
+
 
           {/* Name Details */}
           <div className="flex-1 min-w-0 flex flex-col justify-center">
