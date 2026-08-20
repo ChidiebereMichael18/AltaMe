@@ -8,21 +8,29 @@ interface NavbarProps {
 
 export function Navbar({ user, onSignIn, onSignOut }: NavbarProps) {
   return (
-    <nav className="navbar">
-      <div className="navbar-wordmark">
-        altame<span className="navbar-wordmark-dot">.</span>
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-10 h-14 bg-[#16140f] border-b-4 border-[#d63a1a]">
+      <div className="font-serif text-2xl font-bold tracking-tight text-white select-none">
+        altame<span className="text-[#d63a1a]">.</span>
       </div>
 
-      <div className="navbar-right">
+      <div className="flex items-center gap-3">
         {user ? (
           <>
-            <span className="navbar-user">{user.name}</span>
-            <button className="btn btn-ghost" onClick={onSignOut}>
-              Sign out
+            <span className="text-xs text-[#8a8880] tracking-wider font-mono">
+              {user.name}
+            </span>
+            <button
+              onClick={onSignOut}
+              className="text-xs uppercase tracking-widest text-[#8a8880] hover:text-white transition-colors cursor-pointer px-2 py-1"
+            >
+              Sign Out
             </button>
           </>
         ) : (
-          <button className="btn btn-nav-accent" onClick={onSignIn}>
+          <button
+            onClick={onSignIn}
+            className="text-xs uppercase tracking-wider font-semibold text-[#d63a1a] border border-[#3a3830] hover:border-[#d63a1a] hover:bg-[#d63a1a]/10 px-3.5 py-1.5 transition-colors cursor-pointer"
+          >
             Sign in to save
           </button>
         )}
