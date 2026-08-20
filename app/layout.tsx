@@ -26,12 +26,17 @@ export const metadata: Metadata = {
   description:
     "Generate a complete, realistic fake identity - name, age, SSN, address, and more. Free, instant, no account required.",
   keywords: ["fake identity", "identity generator", "test data", "fake name", "SSN generator", "developer tools"],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     title: "Altame - Generate a New Identity",
     description: "A complete fake persona, generated instantly. For testing, privacy, and development.",
     type: "website",
   },
 };
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
