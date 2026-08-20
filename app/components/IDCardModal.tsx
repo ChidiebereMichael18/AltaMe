@@ -258,15 +258,8 @@ export function IDCardModal({ identity, onClose }: IDCardModalProps) {
                 </div>
               </div>
             </div>
-
-            {/* Ghost Photo Watermark */}
-            <div className="dl-ghost-photo">
-              <svg width="45" height="55" viewBox="0 0 90 115" fill="none" opacity="0.2">
-                <circle cx="45" cy="40" r="17" fill="#111" />
-                <path d="M15 98C15 78 27 70 45 70C63 70 75 78 75 98V115H15V98Z" fill="#111" />
-              </svg>
-            </div>
           </div>
+
 
           {/* Bottom Barcode / MRZ Strip */}
           <div className="dl-card-footer">
